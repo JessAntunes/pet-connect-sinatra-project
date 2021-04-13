@@ -1,0 +1,5 @@
+class ShelterController < ApplicationController
+
+
+
+end
