@@ -28,15 +28,15 @@ class AnimalController < ApplicationController
     end 
     
     patch '/animal/:id' do 
-        @animal = Animal.find(params[:id])
+        animal = Animal.find(params[:id])
         params.delete("_method")
-        @animal.update(params)
-        redirect to "/animal/#{@animal.id}"
+        animal.update(params)
+        redirect to "/animal/#{animal.id}"
     end
     
     delete '/animal/:id' do 
-        @animal = Animal.find(params[:id])
-        @animal.delete
+        animal = Animal.find(params[:id])
+        animal.delete
         redirect to '/animal'
     end
 

@@ -1,25 +1,22 @@
-<h3><%=@shelter.shelter_name%></h3>
-<br>
+<h4><%=@shelter.shelter_name%></h4>
+
   <p>Address: <%=@shelter.location%></p>
   <p>Email: <%=@shelter.email%></p>
   <p>Phone Number: <%=@shelter.phone%></p>
   <p>Hours of Operation: <%=@shelter.hours%></p>
+<br>
 
-<form action="/shelter/<%= @shelter.id%>/animals">
-    <input type="submit" value="Meet Our Animals!" />
-</form>
-<br>
+<p><a href="/shelter/<%= @shelter.id%>/animals" class="waves-effect light-blue lighten-2 btn">Meet Our Animals!</a></p>
+
+<p><a href="/shelter" class="waves-effect light-blue lighten-2 btn">Back</a></p>
+
 <%if current_shelter == @shelter%>
-<form action="/shelter/<%= @shelter.id%>/edit">
-    <input type="submit" value="Edit Account" />
-</form>
-<br>
-<form action="/shelter/<%= @shelter.id %>" method="post">
+<p><a href="/shelter/<%= @shelter.id%>/edit" class="waves-effect light-blue lighten-2 btn">Edit Account</a></p>
+
+ <form action="/shelter/<%= @shelter.id %>" method="post">
 	<input type="hidden" name="_method" value="delete">
-	<input type="submit" value="Delete Account">
+	<input class="waves-effect light-blue lighten-2 btn" type="submit" value="Delete Account">
 </form>
 <%end%>
 <br>
-<form action="/shelter">
-    <input type="submit" value="Back"/>
-</form>
+

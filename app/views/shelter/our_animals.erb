@@ -1,4 +1,4 @@
-<h1>Meet Our Animals!</h1>
+<h3>Meet Our Animals!</h3>
 
 <%@shelter.animals.each do |animal| %>
 <p>Name: <a href="/animal/<%=animal.id%>"><%=animal.name%></a></p>
@@ -6,16 +6,13 @@
 <br>
 <%end%>
 
-
-<form action="/shelter/<%= @shelter.id%>">
-    <input type="submit" value="Back"/>
-</form>
+<a href="/shelter/<%= @shelter.id%>" class="waves-effect light-blue lighten-2 btn">Back</a>
 <br>
 <%if @current_shelter == @shelter%>
-<form action="/animal/<%= @animal.id%>/new">
-    <input type="submit" value="Add New Animal" />
-</form>
+<a href="/animal/<%= @animal.id%>/new"" class="waves-effect light-blue lighten-2 btn">Add New Animal</a>
 <%end%>
+
+
 
 
 

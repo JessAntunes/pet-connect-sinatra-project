@@ -1,4 +1,4 @@
-<h3>Edit Account:</h3>
+<h4>Edit Account:</h4>
 <br>
 <form action="/shelter/<%= @shelter.id%>" method="POST">
 <input id="hidden" type="hidden" name="_method" value="PATCH">
@@ -7,5 +7,5 @@
   <p>Address: <input type="text" name="location" value="<%=@shelter.location%>"></p>
   <p>Phone Number: <input type="text" name="phone" value="<%=@shelter.phone%>"></p>
   <p>Hours of Operation: <input type="text" name="hours" value="<%=@shelter.hours%>"></p>
-  <input type="submit" value="Edit">
+  <input class="waves-effect light-blue lighten-2 btn" type="submit" value="Edit">
 </form>

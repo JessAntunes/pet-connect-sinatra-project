@@ -17,16 +17,14 @@
 <p>Shelter: <a href="/shelter/<%=@shelter.id%>"><%=@shelter.shelter_name%></a></p>
 <p>Added: <%=@animal.added%></p>
 
-<form action="/shelter/<%= @shelter.id%>/animals">
-    <input type="submit" value="Back"/>
-</form>
+<p><a href="/shelter/<%= @shelter.id%>/animals" class="waves-effect light-blue lighten-2 btn">Back</a></p>
 <br>
 <%if @current_shelter == @shelter%>
 <form action="/animal/<%= @animal.id%>/edit">
     <input type="submit" value="Edit" />
 </form>
 <br>
-<form action="/animal/<%= @animal.id %>" method="post">
+<form  \class="waves-effect light-blue lighten-2 btn" action="/animal/<%= @animal.id %>" method="post">
 	<input type="hidden" name="_method" value="delete">
 	<input type="submit" value="Delete Animal">
 </form>
