@@ -15,7 +15,7 @@
     <p>Pet-Friendly: No</p>
 <%end%>
 <p>Shelter: <a href="/shelter/<%=@shelter.id%>"><%=@shelter.shelter_name%></a</p>
-<p>Added: <%=@animal.hours%></p>
+<p>Added: <%=@animal.added%></p>
 
 <%if @current_shelter == @shelter%>
 <form action="/animal/<%= @animal.id%>/edit">
