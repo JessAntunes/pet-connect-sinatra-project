@@ -2,7 +2,7 @@ class CreateAnimalsTable < ActiveRecord::Migration[5.2]
   def change
     create_table :animals do |t|
       t.string :name
-      t.string :type
+      t.string :species
       t.string :gender
       t.string :age
       t.string :temperment
@@ -10,5 +10,6 @@ class CreateAnimalsTable < ActiveRecord::Migration[5.2]
       t.boolean :pet_friendly
       t.integer :shelter_id
       t.date  :added
+    end
   end
 end
