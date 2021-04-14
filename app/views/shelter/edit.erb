@@ -1,6 +1,7 @@
 <h3>Edit Account:</h3>
 <br>
-<form action="/signup" method="POST">
+<form action="/shelter/<%= @shelter.id%>" method="POST">
+<input id="hidden" type="hidden" name="_method" value="PATCH">
   <p>Email: <input type="text" name="email" value="<%=@shelter.email%>">></p>
   <p>Shelter Name: <input type="text" name="shelter_name" value="<%=@shelter.name%>">></p>
   <p>Address: <input type="text" name="location" value="<%=@shelter.location%>"></p>
