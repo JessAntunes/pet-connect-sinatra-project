@@ -1,6 +1,6 @@
 <h1>Enter Animals Information Below:</h1>
 
-<form action="/animal/<%= @animal.id %>" method="POST">
+<form action="/animal" method="POST">
 <p>Name: <input type="text" name="name"></p>
 <p>Species: <input type="text" name="species"></p>
 <p>Gender:  <input type="radio" id="male" name="gender" value="male">
@@ -15,7 +15,7 @@
   <option value="adult">Adult</option>
   <option value="senior">Senior</option>
 </select> </p>
-<p><label for="temprement">Temperment: </label>
+<p><label for="temperment">Temperment: </label>
 
 <select name="temperment" id="temperment">
   <option value="mild">Mild</option>
