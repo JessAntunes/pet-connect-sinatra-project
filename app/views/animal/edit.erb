@@ -1,11 +1,29 @@
 <h1>Enter Animals Information Below:</h1>
 
-<p>Species: <input type="text" name="email"></p>
-<p>Gender: <%=@animal.gender%></p>
-<p>Age: <%=@animal.age%></p>
-<p>Temperment: <%=@animal.temperment%></p>
-<p>Kid-Friendly: <input type="checkbox" name="kid_friendly" value=true></p>
-<p>Pet-Friendly: <input type="checkbox" name="kid_friendly" value=true></p>
+<form action="/signup" method="POST">
+<p>Name: <input type="text" name="name" value="@animal.name"></p>
+<p>Species: <input type="text" name="species" value="@animal.species"></p>
+<p>Gender:  <input type="radio" id="male" name="gender" value="male">
+<label for="male">Male</label>
+<input type="radio" id="female" name="gender" value="female">
+<label for="female">Female</label></p>
+<p><label for="age">Age: </label>
 
-<p>Shelter: <a href="/shelter/<%=@shelter.id%>"><%=@shelter.shelter_name%></a</p>
-<p>Added: <%=Date.now></p>
+<select name="age" id="age">
+  <option value="baby">Volvo</option>
+  <option value="young">Saab</option>
+  <option value="adult">Mercedes</option>
+  <option value="senior">Audi</option>
+</select> </p>
+<p><label for="temprement">Temperment: </label>
+
+<select name="temperment" id="temperment">
+  <option value="mild">Volvo</option>
+  <option value="playful">Saab</option>
+  <option value="anxious">Mercedes</option>
+</select> </p>
+<p>Kid-Friendly: <input type="checkbox" name="kid_friendly" value=true></p>
+<p>Pet-Friendly: <input type="checkbox" name="pet_friendly" value=true></p>
+
+  <input type="submit" value="Edit">
+</form>
