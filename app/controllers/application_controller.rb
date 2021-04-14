@@ -21,7 +21,7 @@ class ApplicationController < Sinatra::Base
     shelter = Shelter.find_by(email: params[:email])
     if shelter && shelter.authenticate(params[:password])
       session[:shelter_id] = shelter.id
-      redirect "/login"
+      redirect "/shelter"
     else
       redirect "/signup"
     end
