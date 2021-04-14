@@ -1,40 +1,41 @@
 class AnimalController < ApplicationController
 
-    get '/animals' do
-        @animals = Animal.all
+    get '/animal' do
+        @animal = Animal.all
         erb :"animal/index"
     end 
     
-    get '/animals/new' do 
+    get '/animal/new' do 
         erb :"animal/new"
     end
     
-    post '/animals' do 
+    post '/animal' do 
         @animal = Animal.create(params)
-        redirect "/animals/#{@animal.id}"
+        redirect "/animal/#{@animal.id}"
     end
     
-    get '/animals/:id' do 
+    get '/animal/:id' do 
         @current_shelter = current_shelter
-        @animal = Animal.find_by_id(params[:id])
+        @animal = Animal.find(params[:id])
+        @shelter = Shelter.find(@animal.shelter_id)
         erb :'animal/show'
     end 
     
-    get '/animals/:id/edit' do 
-        @animal = Animal.find_by_id(params[:id])
+    get '/animal/:id/edit' do 
+        @animal = Animal.find(params[:id])
         erb :'animal/edit'
     end 
     
-    patch '/animals/:id' do 
-        @animal = Animal.find_by_id(params[:id])
+    patch '/animal/:id' do 
+        @animal = Animal.find(params[:id])
         @animal.update(params)
-        redirect to "/animals/#{@animal.id}"
+        redirect to "/animal/#{@animal.id}"
     end
     
-    delete '/animals/:id' do 
-        @animal = Animal.find_by_id(params[:id])
+    delete '/animal/:id' do 
+        @animal = Animal.find(params[:id])
         @animal.delete
-        redirect to '/animals'
+        redirect to '/animal'
     end
 
 
