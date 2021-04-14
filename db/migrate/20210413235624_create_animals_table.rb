@@ -1,0 +1,13 @@
+class CreateAnimalsTable < ActiveRecord::Migration[5.2]
+  def change
+    create_table :animals do |t|
+      t.string :name
+      t.string :type
+      t.string :gender
+      t.string :age
+      t.string :temperment
+      t.boolean :kid_friendly
+      t.boolean :pet_friendly
+      t.integer :shelter_id
+  end
+end
