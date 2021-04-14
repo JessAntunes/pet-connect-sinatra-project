@@ -1,0 +1,8 @@
+<h1>Current Shelters:</h1>
+
+<%Shelters.all.each do |shelter|%>
+<p><a href="/shelter/<%=shelter.id%>"><%=shelter.shelter_name%></a></p>
+<p><%=shelter.location%></p>
+<p><%=shelter.hours%> Call: <%=shelter.phone%></p>
+<br>
+<%end%>

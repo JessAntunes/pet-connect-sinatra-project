@@ -5,6 +5,8 @@
   <p>Phone Number: <%=@shelter.phone%></p>
   <p>Hours of Operation: <%=@shelter.hours%></p>
 
+
+<%if current_shelter == @shelter%>
 <form action="/shelters/<%= @shelter.id%>/edit">
     <input type="submit" value="Edit Account" />
 </form>
@@ -13,3 +15,4 @@
 	<input type="hidden" name="_method" value="delete">
 	<input type="submit" value="Delete Account">
 </form>
+<%end%>
