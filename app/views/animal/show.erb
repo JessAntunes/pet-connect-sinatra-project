@@ -14,14 +14,14 @@
 <%else%>
     <p>Pet-Friendly: No</p>
 <%end%>
-<p>Shelter: <a href="/shelter/<%=@shelter.id%>"><%=@shelter.shelter_name%></a</p>
+<p>Shelter: <a href="/shelter/<%=@shelter.id%>"><%=@shelter.shelter_name%></a></p>
 <p>Added: <%=@animal.added%></p>
 
 <%if @current_shelter == @shelter%>
 <form action="/animal/<%= @animal.id%>/edit">
     <input type="submit" value="Edit Account" />
 </form>
-
+<br>
 <form action="/animal/<%= @animal.id %>" method="post">
 	<input type="hidden" name="_method" value="delete">
 	<input type="submit" value="Delete Account">
