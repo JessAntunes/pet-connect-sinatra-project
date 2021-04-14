@@ -19,11 +19,11 @@
 
 <%if @current_shelter == @shelter%>
 <form action="/animal/<%= @animal.id%>/edit">
-    <input type="submit" value="Edit Account" />
+    <input type="submit" value="Edit" />
 </form>
 <br>
 <form action="/animal/<%= @animal.id %>" method="post">
 	<input type="hidden" name="_method" value="delete">
-	<input type="submit" value="Delete Account">
+	<input type="submit" value="Delete Animal">
 </form>
 <%end%>
