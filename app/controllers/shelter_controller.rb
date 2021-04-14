@@ -38,6 +38,7 @@ class ShelterController < ApplicationController
     get '/shelter/:id/animals' do
         @shelter = Shelter.find(params[:id])
         erb :'shelter/our_animals'
+    end
     
     delete '/shelter/:id' do 
         @shelter = Shelter.find(params[:id])
