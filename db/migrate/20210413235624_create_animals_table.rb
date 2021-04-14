@@ -9,5 +9,6 @@ class CreateAnimalsTable < ActiveRecord::Migration[5.2]
       t.boolean :kid_friendly
       t.boolean :pet_friendly
       t.integer :shelter_id
+      t.date  :added
   end
 end
