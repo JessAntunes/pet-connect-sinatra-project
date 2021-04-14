@@ -8,18 +8,18 @@
 <form action="/shelter/<%= @shelter.id%>/animals">
     <input type="submit" value="Meet Our Animals!" />
 </form>
-
+<br>
 <%if current_shelter == @shelter%>
-<form action="/shelters/<%= @shelter.id%>/edit">
+<form action="/shelter/<%= @shelter.id%>/edit">
     <input type="submit" value="Edit Account" />
 </form>
-
-<form action="/shelters/<%= @shelter.id %>" method="post">
+<br>
+<form action="/shelter/<%= @shelter.id %>" method="post">
 	<input type="hidden" name="_method" value="delete">
 	<input type="submit" value="Delete Account">
 </form>
 <%end%>
-
-<form action="/shelters">
+<br>
+<form action="/shelter">
     <input type="submit" value="Back"/>
 </form>

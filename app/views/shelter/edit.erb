@@ -2,8 +2,8 @@
 <br>
 <form action="/shelter/<%= @shelter.id%>" method="POST">
 <input id="hidden" type="hidden" name="_method" value="PATCH">
-  <p>Email: <input type="text" name="email" value="<%=@shelter.email%>">></p>
-  <p>Shelter Name: <input type="text" name="shelter_name" value="<%=@shelter.name%>">></p>
+  <p>Email: <input type="text" name="email" value="<%=@shelter.email%>"></p>
+  <p>Shelter Name: <input type="text" name="shelter_name" value="<%=@shelter.shelter_name%>"></p>
   <p>Address: <input type="text" name="location" value="<%=@shelter.location%>"></p>
   <p>Phone Number: <input type="text" name="phone" value="<%=@shelter.phone%>"></p>
   <p>Hours of Operation: <input type="text" name="hours" value="<%=@shelter.hours%>"></p>

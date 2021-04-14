@@ -2,11 +2,11 @@ class ShelterController < ApplicationController
 
     get '/shelter' do
         @shelter = Shelter.all
-        erb :"shelter/index"
+        erb :'shelter/index'
     end 
     
     get "/signup" do
-        erb :"shelter/signup"
+        erb :'shelter/signup'
     end
     
     post "/signup" do
