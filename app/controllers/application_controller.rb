@@ -18,9 +18,9 @@ class ApplicationController < Sinatra::Base
   end
 
   post "/login" do
-    user = User.find_by(username: params[:username])
-    if user && user.authenticate(params[:password])
-      session[:user_id] = user.id
+    shelter = Shelter.find_by(email: params[:email])
+    if shelter && shelter.authenticate(params[:password])
+      session[:shelter_id] = shelter.id
       redirect "/login"
     else
       redirect "/signup"
@@ -38,11 +38,11 @@ class ApplicationController < Sinatra::Base
 
   helpers do
     def logged_in?
-      !!session[:user_id]
+      !!session[:shelter_id]
     end
 
-    def current_user
-      User.find(session[:user_id])
+    def current_shelter
+      Shelter.find(session[:shelter_id])
     end
   end
 
