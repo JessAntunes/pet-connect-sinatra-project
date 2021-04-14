@@ -4,27 +4,11 @@
 <input id="hidden" type="hidden" name="_method" value="PATCH">
 <p>Name: <input type="text" name="name" value="<%=@animal.name%>"></p>
 <p>Species: <input type="text" name="species" value="<%=@animal.species%>"></p>
-<p>Gender:  <input type="radio" id="male" name="gender" value="male">
-<label for="male">Male</label>
-<input type="radio" id="female" name="gender" value="female">
-<label for="female">Female</label></p>
-<p><label for="age">Age: </label>
+<p>Gender: <input type="text" name="gender" value="<%=@animal.gender%>"></p>
+<p>Age: (baby, young, adult, senior) <input type="text" id="age" name="age" value="<%=@animal.age%>"></p>  
 
-<select name="age" id="age">
-  <option value="baby">Baby</option>
-  <option value="young">Young</option>
-  <option value="adult">Adult</option>
-  <option value="senior">Senior</option>
-</select> </p>
-<p><label for="temperment">Temperment: </label>
-
-<select name="temperment" id="temperment">
-  <option value="mild">Mild</option>
-  <option value="playful">Playful</option>
-  <option value="anxious">Anxious</option>
-</select> </p>
-<p>Kid-Friendly: <input type="checkbox" name="kid_friendly" value=true></p>
-<p>Pet-Friendly: <input type="checkbox" name="pet_friendly" value=true></p>
-
-  <input class="waves-effect light-blue lighten-2 btn" type="submit" value="Edit">
+<p>Temperment: (mild, playful, anxious)<input type="text" name="temperment" value="<%=@animal.temperament%>"></p>
+<p>Kid-Friendly: (true, false)<input type="text" name="kid_friendly" value="<%=@animal.kid_friendly%>"></p>
+<p>Pet-Friendly: (true, false)<input type="text" name="pet_friendly" value="<%=@animal.pet_friendly%>"></p>
+  <input class="waves-effect light-blue lighten-2 btn" type="submit" value="Submit">
 </form>

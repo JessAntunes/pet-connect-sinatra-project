@@ -19,9 +19,7 @@
 <p><a href="/shelter/<%= @shelter.id%>/animals" class="waves-effect light-blue lighten-2 btn">Back</a></p>
 <br>
 <%if @current_shelter == @shelter%>
-<form action="/animal/<%= @animal.id%>/edit">
-    <input type="submit" value="Edit" />
-</form>
+<p><a href="/animal/<%= @animal.id%>/edit" class="waves-effect light-blue lighten-2 btn">Edit</a></p>
 <br>
 <form  \class="waves-effect light-blue lighten-2 btn" action="/animal/<%= @animal.id %>" method="post">
 	<input type="hidden" name="_method" value="delete">
