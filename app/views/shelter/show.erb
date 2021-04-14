@@ -5,6 +5,9 @@
   <p>Phone Number: <%=@shelter.phone%></p>
   <p>Hours of Operation: <%=@shelter.hours%></p>
 
+<form action="/shelter/<%= @shelter.id%>/animals">
+    <input type="submit" value="Meet Our Animals!" />
+</form>
 
 <%if current_shelter == @shelter%>
 <form action="/shelters/<%= @shelter.id%>/edit">

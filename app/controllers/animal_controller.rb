@@ -1,6 +1,7 @@
 class AnimalController < ApplicationController
 
     get '/animal' do
+        @current_shelter = current_shelter
         @animal = Animal.all
         erb :"animal/index"
     end 

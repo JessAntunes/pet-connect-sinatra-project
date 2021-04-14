@@ -34,6 +34,10 @@ class ShelterController < ApplicationController
         @shelter.update(params)
         redirect to "/shelter/#{@shelter.id}"
     end
+
+    get '/shelter/:id/animals' do
+        @shelter = Shelter.find(params[:id])
+        erb :'shelter/our_animals'
     
     delete '/shelter/:id' do 
         @shelter = Shelter.find(params[:id])

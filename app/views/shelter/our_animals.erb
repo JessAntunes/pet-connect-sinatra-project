@@ -1,0 +1,9 @@
+<>
+
+
+
+<%if @current_shelter == @shelter%>
+<form action="/animal/<%= @animal.id%>/new">
+    <input type="submit" value="Add New Animal" />
+</form>
+<%end%>
