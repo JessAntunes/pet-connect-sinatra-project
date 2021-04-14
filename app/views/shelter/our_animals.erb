@@ -1,7 +1,7 @@
 <h1>Meet Our Animals!</h1>
 
 <%@shelter.animals.each do |animal| %>
-<p>Name: <a href="/animal/<%=animal.id%>"><%=animal.name%></a</p>
+<p>Name: <a href="/animal/<%=animal.id%>"><%=animal.name%></a></p>
 <p>Species: <%=animal.species%> | Age: <%=animal.age%> | Gender: <%=animal.gender%></p>
 <br>
 <%end%>

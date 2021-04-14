@@ -31,6 +31,7 @@ class ShelterController < ApplicationController
     
     patch '/shelter/:id' do 
         @shelter = Shelter.find(params[:id])
+        params.delete("_method")
         @shelter.update(params)
         redirect to "/shelter/#{@shelter.id}"
     end
