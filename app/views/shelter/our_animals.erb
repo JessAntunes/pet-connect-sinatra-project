@@ -7,13 +7,15 @@
 <%end%>
 
 
+<form action="/shelter/<%= @shelter.id%>">
+    <input type="submit" value="Back"/>
+</form>
+<br>
 <%if @current_shelter == @shelter%>
 <form action="/animal/<%= @animal.id%>/new">
     <input type="submit" value="Add New Animal" />
 </form>
 <%end%>
 
-<form action="/animal">
-    <input type="submit" value="Back"/>
-</form>
+
 
