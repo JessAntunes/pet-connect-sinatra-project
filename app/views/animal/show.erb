@@ -17,6 +17,10 @@
 <p>Shelter: <a href="/shelter/<%=@shelter.id%>"><%=@shelter.shelter_name%></a></p>
 <p>Added: <%=@animal.added%></p>
 
+<form action="/shelter/<%= @shelter.id%>/animals">
+    <input type="submit" value="Back"/>
+</form>
+<br>
 <%if @current_shelter == @shelter%>
 <form action="/animal/<%= @animal.id%>/edit">
     <input type="submit" value="Edit" />
@@ -27,3 +31,4 @@
 	<input type="submit" value="Delete Animal">
 </form>
 <%end%>
+
