@@ -1,0 +1,29 @@
+<h1>Enter Animals Information Below:</h1>
+
+<form action="/animal/<%= @animal.id %>" method="POST">
+<p>Name: <input type="text" name="name"></p>
+<p>Species: <input type="text" name="species"></p>
+<p>Gender:  <input type="radio" id="male" name="gender" value="male">
+<label for="male">Male</label>
+<input type="radio" id="female" name="gender" value="female">
+<label for="female">Female</label></p>
+<p><label for="age">Age: </label>
+
+<select name="age" id="age">
+  <option value="baby">Baby</option>
+  <option value="young">Young</option>
+  <option value="adult">Adult</option>
+  <option value="senior">Senior</option>
+</select> </p>
+<p><label for="temprement">Temperment: </label>
+
+<select name="temperment" id="temperment">
+  <option value="mild">Mild</option>
+  <option value="playful">Playful</option>
+  <option value="anxious">Anxious</option>
+</select> </p>
+<p>Kid-Friendly: <input type="checkbox" name="kid_friendly" value=true></p>
+<p>Pet-Friendly: <input type="checkbox" name="pet_friendly" value=true></p>
+
+  <input type="submit" value="Submit">
+</form>
