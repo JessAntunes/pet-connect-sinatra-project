@@ -2,11 +2,11 @@ class AnimalController < ApplicationController
 
     get '/animals' do
         @animals = Animal.all
-        erb :index
+        erb :"animal/index"
     end 
     
     get '/animals/new' do 
-        erb :new
+        erb :"animal/new"
     end
     
     post '/animals' do 
@@ -16,12 +16,12 @@ class AnimalController < ApplicationController
     
     get '/animals/:id' do 
         @animal = Animal.find_by_id(params[:id])
-        erb :show
+        erb :'animal/show'
     end 
     
     get '/animals/:id/edit' do 
         @animal = Animal.find_by_id(params[:id])
-        erb :edit
+        erb :'animal/edit'
     end 
     
     patch '/animals/:id' do 
