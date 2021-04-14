@@ -19,6 +19,7 @@ class ShelterController < ApplicationController
     end
     
     get '/shelter/:id' do 
+        @current_shelter = current_shelter
         @shelter = Shelter.find(params[:id])
         erb :'shelter/show'
     end 

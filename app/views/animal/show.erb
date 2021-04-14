@@ -1,0 +1,29 @@
+<h1>Meet <%=@animal.name%></h1>
+<br>
+<p>Species: <%=@animal.species%></p>
+<p>Gender: <%=@animal.gender%></p>
+<p>Age: <%=@animal.age%></p>
+<p>Temperment: <%=@animal.temperment%></p>
+<%if @animal.kid_friendly == true%>
+    <p>Kid-Friendly: Yes</p>
+<%else%>
+    <p>Kid-Friendly: No</p>
+<%end%>
+<%if @animal.pet_friendly == true%>
+    <p>Pet-Friendly: Yes</p>
+<%else%>
+    <p>Pet-Friendly: No</p>
+<%end%>
+<p>Shelter: <a href="/shelter/<%=@shelter.id%>"><%=@shelter.shelter_name%></a</p>
+<p>Added: <%=@animal.hours%></p>
+
+<%if @current_shelter == @shelter%>
+<form action="/animal/<%= @animal.id%>/edit">
+    <input type="submit" value="Edit Account" />
+</form>
+
+<form action="/animal/<%= @animal.id %>" method="post">
+	<input type="hidden" name="_method" value="delete">
+	<input type="submit" value="Delete Account">
+</form>
+<%end%>
