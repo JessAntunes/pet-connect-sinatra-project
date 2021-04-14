@@ -14,7 +14,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/login" do
-    erb :"session/login"
+    erb :login
   end
 
   post "/login" do
@@ -28,7 +28,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/failure" do
-    erb :"session/failure"
+    erb :failure
   end
 
   get "/logout" do

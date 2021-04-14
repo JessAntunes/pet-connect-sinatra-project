@@ -1,7 +1,7 @@
 class ShelterController < ApplicationController
 
-    get '/shelters' do
-        @shelters = Shelter.all
+    get '/shelter' do
+        @shelter = Shelter.all
         erb :"shelter/index"
     end 
     
@@ -14,30 +14,31 @@ class ShelterController < ApplicationController
             redirect "/failure"
         else 
             shelter = Shelter.create(params)
-            redirect "/shelters"
+            redirect "/shelter"
         end
     end
     
-    get '/shelters/:id' do 
-        @shelter = Shelter.find_by_id(params[:id])
+    get '/shelter/:id' do 
+        @shelter = Shelter.find(params[:id])
         erb :'shelter/show'
     end 
     
-    get '/shelters/:id/edit' do 
-        @shelter = Shelter.find_by_id(params[:id])
+    get '/shelter/:id/edit' do 
+        @shelter = Shelter.find(params[:id])
         erb :'shelter/edit'
     end 
     
-    patch '/shelters/:id' do 
-        @shelter = Shelter.find_by_id(params[:id])
+    patch '/shelter/:id' do 
+        @shelter = Shelter.find(params[:id])
         @shelter.update(params)
-        redirect to "/shelters/#{@shelter.id}"
+        redirect to "/shelter/#{@shelter.id}"
     end
     
-    delete '/shelters/:id' do 
-        @shelter = Shelter.find_by_id(params[:id])
+    delete '/shelter/:id' do 
+        @shelter = Shelter.find(params[:id])
+        @shelter.animals.destroy_all
         @shelter.delete
-        redirect to '/shelters'
+        redirect to '/shelter'
     end
 
 

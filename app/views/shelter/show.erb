@@ -1,0 +1,15 @@
+<h3><%=@shelter.name%></h3>
+<br>
+  <p>Address: <%=@shelter.location%></p>
+  <p>Email: <%=@shelter.email%></p>
+  <p>Phone Number: <%=@shelter.phone%></p>
+  <p>Hours of Operation: <%=@shelter.hours%></p>
+
+<form action="/shelters/<%= @shelter.id%>/edit">
+    <input type="submit" value="Edit Account" />
+</form>
+
+<form action="/shelters/<%= @shelter.id %>" method="post">
+	<input type="hidden" name="_method" value="delete">
+	<input type="submit" value="Delete Account">
+</form>
