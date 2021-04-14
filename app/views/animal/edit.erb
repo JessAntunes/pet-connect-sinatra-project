@@ -1,9 +1,9 @@
 <h1>Enter Animals Information Below:</h1>
-
+<br>
 <form action="/animal/<%= @animal.id %>" method="POST">
 <input id="hidden" type="hidden" name="_method" value="PATCH">
-<p>Name: <input type="text" name="name" value="@animal.name"></p>
-<p>Species: <input type="text" name="species" value="@animal.species"></p>
+<p>Name: <input type="text" name="name" value="<%=@animal.name%>"></p>
+<p>Species: <input type="text" name="species" value="<%=@animal.species%>"></p>
 <p>Gender:  <input type="radio" id="male" name="gender" value="male">
 <label for="male">Male</label>
 <input type="radio" id="female" name="gender" value="female">
