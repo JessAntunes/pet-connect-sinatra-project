@@ -27,8 +27,8 @@ class AnimalController < ApplicationController
     end 
     
     get '/animal/:id/edit' do 
-        if logged_in?
-            @animal = Animal.find(params[:id])
+        @animal = Animal.find(params[:id])
+        if logged_in? && @animal.shelter_id == current_shelter.id
             erb :'animal/edit'
         else
             redirect '/login'

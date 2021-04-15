@@ -25,9 +25,9 @@ class ShelterController < ApplicationController
         erb :'shelter/show'
     end 
     
-    get '/shelter/:id/edit' do 
-        if logged_in?
-            @shelter = Shelter.find(params[:id])
+    get '/shelter/:id/edit' do
+        @shelter = Shelter.find(params[:id]) 
+        if logged_in? && @shelter == current_shelter
             erb :'shelter/edit'
         else
             redirect '/login'
