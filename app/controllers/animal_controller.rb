@@ -19,7 +19,7 @@ class AnimalController < ApplicationController
     end
     
     get '/animal/:id' do 
-        @current_shelter = current_shelter
+        
         @animal = Animal.find(params[:id])
         @shelter = Shelter.find(@animal.shelter_id)
         erb :'animal/show'

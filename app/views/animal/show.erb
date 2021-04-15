@@ -15,11 +15,11 @@
 <%end%>
 <p>Shelter: <a href="/shelter/<%=@shelter.id%>"><%=@shelter.shelter_name%></a></p>
 <p>Added: <%=@animal.added%></p>
-
-<p><a href="/shelter/<%= @shelter.id%>/animals" class="waves-effect light-blue lighten-2 btn">Back</a></p>
 <br>
 <%if logged_in?%>
-    <%if @current_shelter == @shelter%>
+    <%if current_shelter.id == @shelter.id%>
+    <p><a href="/shelter/<%= @shelter.id%>/animals" class="waves-effect light-blue lighten-2 btn">Back</a></p>
+    <br>
     <p><a href="/animal/<%= @animal.id%>/edit" class="waves-effect light-blue lighten-2 btn">Edit</a></p>
     <br>
     <form   action="/animal/<%= @animal.id %>" method="post">
@@ -27,5 +27,8 @@
 	    <input class="waves-effect light-blue lighten-2 btn" type="submit" value="Delete Animal">
     </form>
     <%end%>
+<%else%>
+    <p><a href="/animal" class="waves-effect light-blue lighten-2 btn">Back</a></p>
+
 <%end%>
 

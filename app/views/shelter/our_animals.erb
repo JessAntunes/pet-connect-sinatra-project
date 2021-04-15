@@ -8,8 +8,10 @@
 
 <a href="/shelter/<%= @shelter.id%>" class="waves-effect light-blue lighten-2 btn">Back</a>
 <br>
-<%if @current_shelter == @shelter%>
-<a href="/animal/<%= @animal.id%>/new"" class="waves-effect light-blue lighten-2 btn">Add New Animal</a>
+<%if logged_in?%>
+    <%if current_shelter.id == @shelter.id%>
+        <a href="/animal/<%= @animal.id%>/new"" class="waves-effect light-blue lighten-2 btn">Add New Animal</a>
+    <%end%>
 <%end%>
 
 
