@@ -1,11 +1,3 @@
-GIT
-  remote: https://github.com/faker-ruby/faker.git
-  revision: b33a4e46e567054b2ddcfa8c0dff63514fde3397
-  branch: master
-  specs:
-    faker (2.18.0)
-      i18n (>= 1.6, < 2)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -37,7 +29,10 @@ GEM
     concurrent-ruby (1.1.8)
     daemons (1.3.1)
     diff-lcs (1.4.4)
+    dotenv (2.7.6)
     eventmachine (1.2.7)
+    faker (2.17.0)
+      i18n (>= 1.6, < 2)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
     method_source (1.0.0)
@@ -118,7 +113,8 @@ DEPENDENCIES
   activerecord (~> 5.2)
   bcrypt
   capybara
-  faker!
+  dotenv
+  faker
   pry
   rack-test
   rake

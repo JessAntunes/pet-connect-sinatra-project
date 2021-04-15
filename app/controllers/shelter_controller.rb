@@ -32,7 +32,6 @@ class ShelterController < ApplicationController
         else
             redirect '/login'
         end
-
     end 
     
     patch '/shelter/:id' do 
