@@ -30,6 +30,10 @@
       </ul>
     </div>
     </nav>
+
+    <% flash.keys.each do | x | %>
+      <h6><%=flash[x]%></h6>
+    <% end %>
       
       
         <%= yield %>

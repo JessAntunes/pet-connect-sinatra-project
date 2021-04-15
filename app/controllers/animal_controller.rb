@@ -10,7 +10,7 @@ class AnimalController < ApplicationController
         if logged_in?
             erb :"animal/new"
         else
-            erb :failure 
+            redirect '/login' 
         end
     end
     
@@ -31,7 +31,7 @@ class AnimalController < ApplicationController
             @animal = Animal.find(params[:id])
             erb :'animal/edit'
         else
-            erb :failure
+            redirect '/login'
         end
     end 
     

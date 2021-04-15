@@ -30,7 +30,7 @@ class ShelterController < ApplicationController
             @shelter = Shelter.find(params[:id])
             erb :'shelter/edit'
         else
-            erb :failure
+            redirect '/login'
         end
 
     end 
