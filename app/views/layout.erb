@@ -17,22 +17,22 @@
   <body>
    
     <div class="wrapper">
-    <nav>
+      <nav>
     <div class="light-blue lighten-2 nav-wrapper">
-      <img src="images/Small-logo-cat.png">
-      <a href="/" class="brand-logo">  PetConnect</a>
-      <ul id="nav-mobile" class="right light-blue lighten-2 hide-on-med-and-down">
-        <%if logged_in?%>
+      <img src="/images/Small-logo-cat.png">
+      <a href="/" class="brand-logo">PetConnect</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <%if logged_in?%>
+        <li><a href="/shelter/<%=current_shelter.id%>">Account</a></li>
         <li><a href="/logout">Logout</a></li>
-        <%else%>
-        <li><a href="/login">Login</a></li>
-        <%end%>
+      <%end%>
       </ul>
     </div>
-    </nav>
+  </nav>
+
 
     <% flash.keys.each do | x | %>
-      <h6><%=flash[x]%></h6>
+      <p class="error"><%=flash[x]%></p>
     <% end %>
       
       

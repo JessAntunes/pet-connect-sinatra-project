@@ -19,6 +19,10 @@
     line-height: 18px;
   }
 
+  .error {
+    color: rgb(119, 24, 24)
+  }
+
   .button {
     background-color: #00b0ff;
     border: none;
