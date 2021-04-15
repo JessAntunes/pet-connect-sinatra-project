@@ -1,16 +1,17 @@
 <h3>Meet Our Animals!</h3>
 
 <%@shelter.animals.each do |animal| %>
-<h5>Name: <a href="/animal/<%=animal.id%>"><%=animal.name%></a></h5>
+<h6>Name: <a href="/animal/<%=animal.id%>"><%=animal.name%></a></h6>
 <p>Species: <%=animal.species%> | Age: <%=animal.age%> | Gender: <%=animal.gender%></p>
 <br>
 <%end%>
 
 <a href="/shelter/<%= @shelter.id%>" class="waves-effect light-blue lighten-2 btn">Back</a>
 <br>
+<br>
 <%if logged_in?%>
     <%if current_shelter.id == @shelter.id%>
-        <a href="/animal/<%= @animal.id%>/new"" class="waves-effect light-blue lighten-2 btn">Add New Animal</a>
+        <a href="/animal/new"" class="waves-effect light-blue lighten-2 btn">Add New Animal</a>
     <%end%>
 <%end%>
 
