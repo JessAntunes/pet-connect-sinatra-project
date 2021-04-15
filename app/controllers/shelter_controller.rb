@@ -11,7 +11,8 @@ class ShelterController < ApplicationController
     
     post "/signup" do
         if params[:email].empty? || params[:password].empty? || params[:shelter_name].empty? || params[:location].empty?
-            redirect "/failure"
+            flash[:notice] = "Please be sure to complete all fields."
+            redirect "/signup"
         else 
             shelter = Shelter.create(params)
             redirect "/shelter"
