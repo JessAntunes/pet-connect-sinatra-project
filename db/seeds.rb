@@ -3,7 +3,7 @@ Animal.destroy_all
 
 5.times do 
     Shelter.create!(
-        password: "password123",
+        password: ENV['SECRET_PASSWORD'],
         email: Faker::Internet.safe_email,
         shelter_name: Faker::Movies::LordOfTheRings.location + " Animal Shelter",
         phone: Faker::PhoneNumber.cell_phone,
