@@ -73,6 +73,10 @@
     width: 60%; /* 480px / 800px */
   }
 
+  .centered-div {
+    text-align: center;
+  }
+
   .sidebar {
     background: #eee;
     border: 1px solid #ccc;

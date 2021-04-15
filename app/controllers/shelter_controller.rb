@@ -25,8 +25,13 @@ class ShelterController < ApplicationController
     end 
     
     get '/shelter/:id/edit' do 
-        @shelter = Shelter.find(params[:id])
-        erb :'shelter/edit'
+        if logged_in?
+            @shelter = Shelter.find(params[:id])
+            erb :'shelter/edit'
+        else
+            erb :failure
+        end
+
     end 
     
     patch '/shelter/:id' do 

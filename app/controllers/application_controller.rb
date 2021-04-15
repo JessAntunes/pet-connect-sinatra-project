@@ -7,6 +7,7 @@ class ApplicationController < Sinatra::Base
     set :views, 'app/views'
     enable :sessions
     set :session_secret, "bojackjack_horseman_is_actually_a_horse"
+    register Sinatra::Flash
   end
 
   get "/" do
@@ -23,7 +24,8 @@ class ApplicationController < Sinatra::Base
       session[:shelter_id] = shelter.id
       redirect "/shelter"
     else
-      redirect "/signup"
+      flash[:notice] = "Email/Password is invalid. Please try again."
+      redirect "/login"
     end
   end
 

@@ -7,7 +7,11 @@ class AnimalController < ApplicationController
     end 
     
     get '/animal/new' do 
-        erb :"animal/new"
+        if logged_in?
+            erb :"animal/new"
+        else
+            erb :failure 
+        end
     end
     
     post '/animal' do 
@@ -23,8 +27,12 @@ class AnimalController < ApplicationController
     end 
     
     get '/animal/:id/edit' do 
-        @animal = Animal.find(params[:id])
-        erb :'animal/edit'
+        if logged_in?
+            @animal = Animal.find(params[:id])
+            erb :'animal/edit'
+        else
+            erb :failure
+        end
     end 
     
     patch '/animal/:id' do 

@@ -3,7 +3,7 @@
 <h4>Current Shelters:</h4>
 <br>
 <%Shelter.all.each do |shelter|%>
-<h6><a href="/shelter/<%=shelter.id%>"><%=shelter.shelter_name%></a></h6>
+<h5><a href="/shelter/<%=shelter.id%>"><%=shelter.shelter_name%></a></h5>
 <p> </p>
 <p><%=shelter.location%></p>
 <p>Call: <%=shelter.phone%> | Open: <%=shelter.hours%></p>
