@@ -1,8 +1,6 @@
 class AnimalController < ApplicationController
 
     get '/animal' do
-        @current_shelter = current_shelter
-        
         erb :"animal/index"
     end 
     
@@ -15,8 +13,9 @@ class AnimalController < ApplicationController
     end
     
     post '/animal' do 
-        @animal = Animal.create(params)
-        redirect "/animal/#{@animal.id}"
+        animal = Animal.create(params)
+        animal.shelter_id = current_shelter.id
+        redirect "/animal/#{animal.id}"
     end
     
     get '/animal/:id' do 

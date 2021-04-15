@@ -11,6 +11,8 @@
 <p><a href="/shelter" class="waves-effect light-blue lighten-2 btn">Back</a></p>
 
 <%if current_shelter == @shelter%>
+<p><a href="/animal/new" class="waves-effect light-blue lighten-2 btn">Add New Animal</a></p>
+
 <p><a href="/shelter/<%= @shelter.id%>/edit" class="waves-effect light-blue lighten-2 btn">Edit Account</a></p>
 
  <form action="/shelter/<%= @shelter.id %>" method="post">
