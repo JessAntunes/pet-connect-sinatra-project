@@ -46,9 +46,9 @@ class ShelterController < ApplicationController
     end
     
     delete '/shelter/:id' do 
-        @shelter = Shelter.find(params[:id])
-        @shelter.animals.destroy_all
-        @shelter.delete
+        shelter = Shelter.find(params[:id])
+        shelter.animals.destroy_all
+        shelter.delete
         redirect to '/shelter'
     end
 
