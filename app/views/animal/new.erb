@@ -3,13 +3,17 @@
 <form action="/animal" method="POST">
 <p>Name: <input type="text" name="name"></p>
 <p>Species: <input type="text" name="species"></p>
-<p>Gender:  <input type="radio" id="male" name="gender" value="male">
-<label for="male">Male</label>
-<input type="radio" id="female" name="gender" value="female">
-<label for="female">Female</label></p>
+<label>Gender:</label>
+  <select name="gender" class="browser-default">
+    <option value="" disabled selected>Choose your option</option>
+    <option name="gender" value="male">male</option>
+    <option name="gender" value="female">female</option>
+  </select>
+  <br> 
 <p><label for="age">Age: </label>
 
-<select name="age" id="age">
+<select class="browser-default" name="age" id="age">
+  <option value="" disabled selected>Choose your option</option>
   <option value="baby">Baby</option>
   <option value="young">Young</option>
   <option value="adult">Adult</option>
@@ -17,13 +21,26 @@
 </select> </p>
 <p><label for="temperment">Temperment: </label>
 
-<select name="temperment" id="temperment">
+<select class="browser-default" name="temperment" id="temperment">
+  <option value="" disabled selected>Choose your option</option>
   <option value="mild">Mild</option>
   <option value="playful">Playful</option>
   <option value="anxious">Anxious</option>
 </select> </p>
-<p>Kid-Friendly: <input type="checkbox" name="kid_friendly" value=true></p>
-<p>Pet-Friendly: <input type="checkbox" name="pet_friendly" value=true></p>
+<label>Kid-Friendly:</label>
+  <select name="kid_friendly" class="browser-default">
+    <option value="" disabled selected>Choose your option</option>
+    <option name="kid_friendly" value=true>yes</option>
+    <option name="kid_friendly" value=false>no</option>
+  </select>
+  <br> 
+<label>Pet-Friendly:</label>
+  <select name="pet_friendly" class="browser-default">
+    <option value="" disabled selected>Choose your option</option>
+    <option name="pet_friendly" value=true>yes</option>
+    <option name="pet_friendly" value=false>no</option>
+  </select>
+  <br> 
 
   <input class="waves-effect light-blue lighten-2 btn" type="submit" value="Submit">
 </form>
