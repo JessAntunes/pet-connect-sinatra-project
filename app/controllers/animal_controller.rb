@@ -15,6 +15,8 @@ class AnimalController < ApplicationController
     post '/animal' do 
         animal = Animal.create(params)
         animal.shelter_id = current_shelter.id
+        animal.added = Time.now
+        animal.save
         redirect "/animal/#{animal.id}"
     end
     
