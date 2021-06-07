@@ -3,4 +3,8 @@ class Shelter < ActiveRecord::Base
     has_many :animals
 
 
+    def last_added
+        self.animals.last
+    end
+
 end

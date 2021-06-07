@@ -5,6 +5,8 @@
 The user is an organization, typicallly called an animal shelter or SPCA, that houses animals and cares for them until someone is able to adopt them. The organization signs up or logs in to PetConnect and can add animals they currently have in their care and are available for adoption. Along with the typical name, gender, and species attributes, shelters are encouraged to also provide whether an animal is pet or kid friendly. Anyone from the internet can view the shelter's business information and pets that correspond with each facility. Only the shelter needs to login to update their information and add or delete a pet.
  <br><br>
 
+### [View the Demo](https://youtu.be/BTiyWoLCl50)
+
  ## Installation
 
 -To install program fork the program and copy the ssh link. Navigate to the folder of choice using  ```cd folder_name/``` replacing folder_name with the correct name. 

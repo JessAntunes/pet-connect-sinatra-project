@@ -4,6 +4,7 @@
   <p>Email: <%=@shelter.email%></p>
   <p>Phone Number: <%=@shelter.phone%></p>
   <p>Hours of Operation: <%=@shelter.hours%></p>
+  <p>Latest animal added: <a href="/animal/<%=@shelter.last_added.id%>"><%=@shelter.last_added.name%></a>
 <br>
 
 <p><a href="/shelter/<%= @shelter.id%>/animals" class="waves-effect light-blue lighten-2 btn">Meet Our Animals!</a></p>
